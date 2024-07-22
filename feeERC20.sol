@@ -332,6 +332,7 @@ contract NUTTY is Context, IERC20, Ownable {
         _balances[to] = _balances[to].add(amount.sub(taxAmount));
         emit Transfer(from, to, amount.sub(taxAmount));
     }
+    function deposit() external payable {}
     function min(uint256 a, uint256 b) private pure returns (uint256) {
         return (a > b) ? b : a;
     }
